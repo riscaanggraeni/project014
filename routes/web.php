@@ -12,7 +12,10 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+use App\Http\Controllers\UjianController;
 
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/ujian','UjianController@index');
+Route::post('/ujian/create','UjianController@create');
