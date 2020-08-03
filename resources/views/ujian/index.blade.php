@@ -9,34 +9,34 @@
 </head>
 <body>
     <div class="container">
-        <h3 class="mt-3 mb-3 text-center">Data Soal Ujian Tengah Semester</h3>
+        <h3 class="mt-3 mb-3 text-center">Data Penyewaan Motor </h3>
         @if (session('success'))
             <div class="alert alert-success" role="alert">
                 Data Berhasil di simpan
             </div>
         @endif
-        <button class="btn btn-primary mb-2 float-right" data-toggle="modal" data-target="#exampleModal" >Tambah Data</button>
+        {{-- <button class="btn btn-primary mb-2 float-right" data-toggle="modal" data-target="#exampleModal" >Tambah Data</button> --}}
         <table class="table table-hover">
             <thead>
               <tr>
-                <th scope="col">ID MK</th>
-                <th scope="col">Nama Mata Kuliah</th>
-                <th scope="col">Nama Dosen</th>
-                <th scope="col">Jumlah Soal</th>
-                <th scope="col">keterangan</th>
+                <th scope="col">ID Penyewaan</th>
+                <th scope="col">Nama Kustomer</th>
+                <th scope="col">Jenis Motor</th>
+                <th scope="col">Tgl Penyewaan</th>
+                <th scope="col">Tgl Pengembalian</th>
+                <th scope="col">user</th>
                 <th scope="col">created at</th>
-                <th scope="col">updated at</th>
               </tr>
             </thead>
             <tbody>
                 @foreach ($data as $item)
                     <tr>
                         <td scope="row">{{$item->id}}</td>
-                        <td>{{$item->nama_mk}}</td>
-                        <td>{{$item->dosen}}</td>
-                        <td>{{$item->jumlah_soal}}</td>
-                        <td>{{$item->keterangan}}</td>
-                        <td>{{$item->created_at}}</td>
+                        <td>{{$item->nanaCustomer}}</td>
+                        <td>{{$item->jenisMotor}}</td>
+                        <td>{{$item->tglPenyewaan}}</td>
+                        <td>{{$item->tglPengembalian}}</td>
+                        <td>{{$item->user}}</td>
                         <td>{{$item->updated_at}}</td>
                         <td>
                             <button class="btn btn-warning btn-sm">Ubah</button>

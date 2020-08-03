@@ -14,8 +14,8 @@ use Illuminate\Support\Facades\Route;
 */
 use App\Http\Controllers\UjianController;
 
-Route::get('/', function () {
-    return view('welcome');
-});
-Route::get('/ujian','UjianController@index');
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+Route::get('/','UjianController@index');
 Route::post('/ujian/create','UjianController@create');

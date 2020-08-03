@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateUjian extends Migration
+class CreateDatapenyewaan extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateUjian extends Migration
      */
     public function up()
     {
-        Schema::create('ujian', function (Blueprint $table) {
+        Schema::create('datapenyewaan', function (Blueprint $table) {
             $table->Increments('id');
             $table->string('nanaCustomer',50);
             $table->string('jenisMotor',50);
@@ -31,6 +31,6 @@ class CreateUjian extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('ujian');
+        Schema::dropIfExists('datapenyewaan');
     }
 }
